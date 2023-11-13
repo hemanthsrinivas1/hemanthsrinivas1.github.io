@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add this in the head section of your HTML file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous" />
+
+    <style>
+ body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+ }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    size: 120%;
+ }
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    height: 50px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+section {
+    margin: 40px 0;
+    text-align: left;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    padding-bottom: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 0.2%;
+ }
+
+
+    </style>
+    <title>HEMANTH SRINIVAS - Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>R HEMANTH SRINIVAS</h1>
+            <p></p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                     I'm a computer science student proficient in Python and JavaScript. My passion lies at the intersection of technology and business analytics. I'm on a quest to explore the tech side of analytics, leveraging data to drive strategic decisions. Excited about the endless possibilities, I aspire to contribute to cutting-edge research in this dynamic field. 
+            </p>
+ 
+          </div>
+    </section>
+
+    <section id="projects">
+      <div class="container" id="projects-container">
+          <h2>Projects</h2>
+      </div>
+  </section>
+  
+
+    <section id="contact">
+      <div class="container">
+          <h2>Contact</h2>
+          <h4>Let's connect and explore the future of tech together!
+
+          </h4>
+           <a href="mailto:rhemanthmay8@gmail.com"><i class="fas fa-envelope fa-2x"></i> </a> 
+          <a href="https://github.com/hemanthsrinivas1" target="_blank"> <i class="fab fa-github fa-2x"></i>  </a> 
+          <a href="https://www.linkedin.com/in/hemanth-srinivas-1315b2236/" target="_blank"> <i class="fab fa-linkedin fa-2x"></i> </a> 
+      </div>
+  </section>
+  
+  <script>
+    // Sample projects data (replace with your actual project details)
+    const projectsData = [
+        {
+            name: "ZEKA - Driving Assisstance",
+            githubLink: "https://github.com/hemanthsrinivas1/Zeka",
+            stack: "Python, Tensorflow",
+            description: "Developed a Python and TensorFlow-based deep learning model for real-time traffic sign detection, integrated with live weather updates through API. The system serves as a smart assistance tool for drivers.Implemented a driver drowsiness detection system using Python, incorporating MQTT protocol for real-time message broadcasting. The system enhances road safety by alerting drivers when signs of drowsiness are detected.",
+        },
+        {
+            name: "Profile Analyzer ",
+            githubLink: "https://github.com/hemanthsrinivas1/Profile-Analyzer-Web",
+            stack: "Python, Django, React",
+            description: "Created a profile scoring system leveraging Django for the backend infrastructure, seamlessly integrated with a React-based frontend questionnaire system, offering a dynamic and user-friendly experience for profile evaluation.",
+        },
+        // Add more projects as needed
+    ];
+
+    // Function to create project elements and append them to the projects container
+    function renderProjects() {
+        const projectsContainer = document.getElementById("projects-container");
+
+        projectsData.forEach(project => {
+            const projectElement = document.createElement("div");
+            projectElement.classList.add("project");
+
+            projectElement.innerHTML = `
+                <h3>${project.name}</h3>
+                <p><a href="${project.githubLink}" target="_blank">LINK</a></p>
+                <p><u>Tech Stack:</u> ${project.stack}</p>
+                <p>${project.description}</p>
+                <br>
+            `;
+
+            projectsContainer.appendChild(projectElement);
+        });
+    }
+
+    // Call the renderProjects function to display the projects
+    renderProjects();
+
+//     <section id="conference">
+//     <div class="conf">
+//         <h2>Conference Attendance</h2>
+//         <p>
+//             Attended the <strong>International Conference on [Conference Name]</strong>
+//             on [Date]. It was a valuable experience connecting with experts
+//             and sharing insights in the field of [Your Field].
+//         </p>
+//     </div>
+// </section>
+
+</script>
+
+    <footer>
+             <p>&copy; 2023 HEMANTH SRINIVAS. All Rights Reserved.</p>
+     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
